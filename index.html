@@ -4,11 +4,77 @@
 		<meta charset="utf-8">
 		<title>HW5 - Bowling Alley</title>
 		<style>
-			body { margin: 0; }
+			body { 
+				margin: 0;
+				font-family: Arial, sans-serif;
+			}
+
+			/* Scorecard container - 10-frame bowling format */
+			#scorecard-container {
+				position: fixed;
+				bottom: 20px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: rgba(0, 0, 0, 0.75);
+				color: #fff;
+				padding: 15px 25px;
+				border-radius: 8px;
+				font-family: monospace;
+				font-size: 14px;
+				max-width: 600px;
+				border: 2px solid #888;
+				z-index: 100;
+			}
+
+			#scorecard-container h3 {
+				margin: 0 0 10px 0;
+				font-size: 16px;
+				text-align: center;
+				color: #aaa;
+			}
+
+			/* Controls panel */
+			#controls-panel {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				background: rgba(0, 0, 0, 0.6);
+				color: #fff;
+				padding: 15px 20px;
+				border-radius: 6px;
+				font-size: 13px;
+				border: 1px solid #666;
+				z-index: 100;
+			}
+
+			#controls-panel h3 {
+				margin: 0 0 8px 0;
+				font-size: 14px;
+				color: #aaa;
+			}
+
+			#controls-panel p {
+				margin: 5px 0;
+				color: #fff;
+			}
 		</style>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js'></script>
 	</head>
 	<body>
+		<!-- Scorecard container for future 10-frame display -->
+		<div id="scorecard-container">
+			<h3>Bowling Score</h3>
+			<p>score</p>
+		</div>
+
+		<!-- Controls information panel -->
+		<div id="controls-panel">
+			<h3>Controls</h3>
+			<p>O - Toggle orbit camera</p>
+			<p>Drag - Rotate camera</p>
+			<p>Scroll - Zoom</p>
+		</div>
+
 		<script src="src/hw5.js" type="module"></script>
 
 	</body>
